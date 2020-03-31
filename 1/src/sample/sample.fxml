@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="600.0" prefWidth="858.0" GridPane.columnIndex="1">
+         <children>
+            <Pane fx:id="pane1" layoutX="-3.0" layoutY="327.0" prefHeight="272.0" prefWidth="576.0">
+               <children>
+                  <Separator layoutY="-8.0" prefHeight="10.0" prefWidth="569.0" />
+                  <Label layoutX="15.0" layoutY="14.0" text="ФИО" />
+                  <TextField fx:id="NameArea" layoutX="135.0" layoutY="10.0" />
+                  <TextField fx:id="specialityArea" layoutX="135.0" layoutY="233.0" />
+                  <Label layoutX="15.0" layoutY="237.0" text="Специальность" />
+                  <TextField fx:id="StudyplaseArea" layoutX="135.0" layoutY="46.0" />
+                  <Label layoutX="15.0" layoutY="50.0" text="Место учебы" />
+                  <TextField fx:id="AgeArea" layoutX="135.0" layoutY="81.0" onKeyReleased="#AgeChange" />
+                  <Label layoutX="15.0" layoutY="81.0" prefHeight="25.0" prefWidth="43.0" text="Возраст" />
+                  <TextField fx:id="ClassnumberArea" layoutX="136.0" layoutY="118.0" onKeyReleased="#ClassnumberChange" />
+                  <Label layoutX="15.0" layoutY="122.0" prefHeight="17.0" prefWidth="80.0" text="Класс (номер)" />
+                  <TextField fx:id="profileArea" layoutX="136.0" layoutY="156.0" />
+                  <Label layoutX="15.0" layoutY="160.0" text="Профиль" />
+                  <TextField fx:id="FacultyArea" layoutX="136.0" layoutY="194.0" />
+                  <Label layoutX="15.0" layoutY="198.0" text="Факультет" />
+                  <TextField fx:id="groopnumberArea" layoutX="420.0" layoutY="10.0" onKeyReleased="#GroopnumberAreaChange" />
+                  <Label layoutX="299.0" layoutY="14.0" text="Номер группы" />
+                  <TextField fx:id="diplomArea" layoutX="420.0" layoutY="46.0" />
+                  <Label layoutX="299.0" layoutY="50.0" text="Тема диплома" />
+                  <Label layoutX="299.0" layoutY="85.0" text="Тема диссертации" />
+                  <Label layoutX="298.0" layoutY="160.0" text="ФИО" />
+                  <Label layoutX="299.0" layoutY="198.0" text="Кафедра" />
+                  <Label layoutX="300.0" layoutY="237.0" text="Научная степень" />
+                  <TextField fx:id="nameScientArea" layoutX="420.0" layoutY="156.0" />
+                  <TextField fx:id="departmentArea" layoutX="420.0" layoutY="194.0" />
+                  <TextField fx:id="degreeArea" layoutX="420.0" layoutY="233.0" />
+                  <Label layoutX="349.0" layoutY="120.0" text="Научный руководитель">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="288.0" layoutY="114.0" orientation="VERTICAL" prefHeight="159.0" prefWidth="1.0" />
+                  <Separator layoutX="287.0" layoutY="106.0" prefHeight="17.0" prefWidth="290.0" />
+                  <TextField fx:id="disertthemeArea" layoutX="420.0" layoutY="81.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane2" layoutX="575.0" prefHeight="130.0" prefWidth="282.0">
+               <children>
+                  <Button fx:id="AddBut" layoutX="21.0" layoutY="53.0" mnemonicParsing="false" onAction="#Add" prefHeight="25.0" prefWidth="105.0" text="Добавить" />
+                  <ComboBox fx:id="learnbox" layoutX="73.0" layoutY="14.0" prefWidth="150.0" />
+                  <Button fx:id="CorrButton" layoutX="154.0" layoutY="53.0" mnemonicParsing="false" onAction="#Correct" prefHeight="25.0" prefWidth="105.0" text="Редактировать" />
+                  <Button fx:id="DeleteBut" layoutX="21.0" layoutY="91.0" mnemonicParsing="false" onAction="#Delete" prefHeight="25.0" prefWidth="105.0" text="Удалить" />
+                  <Button fx:id="OkBut" layoutX="154.0" layoutY="91.0" mnemonicParsing="false" onAction="#OKClick" prefHeight="25.0" prefWidth="105.0" text="OK" />
+               </children>
+            </Pane>
+            <Pane layoutX="575.0" layoutY="130.0" prefHeight="470.0" prefWidth="282.0">
+               <children>
+                  <Label layoutX="15.0" layoutY="50.0" text="ФИО" />
+                  <Label layoutX="14.0" layoutY="71.0" text="Место учебы" />
+                  <Label layoutX="14.0" layoutY="92.0" text="Возраст" />
+                  <Label layoutX="14.0" layoutY="136.0" text="Класс" />
+                  <Label layoutX="14.0" layoutY="158.0" text="Профиль" />
+                  <Label layoutX="14.0" layoutY="199.0" text="Факультет" />
+                  <Label layoutX="14.0" layoutY="222.0" text="Специальность" />
+                  <Label layoutX="14.0" layoutY="245.0" text="Номер группы" />
+                  <Label layoutX="14.0" layoutY="288.0" text="Тема диплома" />
+                  <Label layoutX="14.0" layoutY="338.0" text="Тема диссертации" />
+                  <Label layoutX="14.0" layoutY="391.0" text="ФИО" />
+                  <Label layoutX="14.0" layoutY="417.0" text="Кафедра " />
+                  <Label layoutX="14.0" layoutY="442.0" text="Научная степень" />
+                  <Label layoutX="69.0" layoutY="364.0" text="Научный руководитель">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="117.0" layoutY="312.0" text="Аспирант">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="110.0" layoutY="267.0" text="Дипломник">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="122.0" layoutY="178.0" text="Студент">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="114.0" layoutY="114.0" text="Школьник">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="29.0" text="Последняя информация">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="disertthemeLabel" layoutX="147.0" layoutY="338.0" text="Label" visible="false" />
+                  <Label fx:id="diplomlabel" layoutX="147.0" layoutY="288.0" text="Label" visible="false" />
+                  <Label fx:id="groopnumberLabel" layoutX="147.0" layoutY="245.0" text="Label" visible="false" />
+                  <Label fx:id="specialityLabel" layoutX="147.0" layoutY="222.0" text="Label" visible="false" />
+                  <Label fx:id="FacultyLabel" layoutX="147.0" layoutY="199.0" text="Label" visible="false" />
+                  <Label fx:id="profileLabel" layoutX="147.0" layoutY="158.0" text="Label" visible="false" />
+                  <Label fx:id="ClassnumberLabel" layoutX="147.0" layoutY="136.0" text="Label" visible="false" />
+                  <Label fx:id="AgeLabel" layoutX="147.0" layoutY="92.0" text="Label" visible="false" />
+                  <Label fx:id="StudyplaseLabel" layoutX="147.0" layoutY="71.0" text="Label" visible="false" />
+                  <Label fx:id="NameLabel" layoutX="147.0" layoutY="50.0" text="Label" visible="false" />
+                  <Label fx:id="nameScientLabel" layoutX="147.0" layoutY="391.0" text="Label" visible="false" />
+                  <Label fx:id="departmentLabel" layoutX="147.0" layoutY="417.0" text="Label" visible="false" />
+                  <Label fx:id="degreeLabel" layoutX="147.0" layoutY="442.0" text="Label" visible="false" />
+               </children>
+            </Pane>
+            <ListView fx:id="learnerListView" layoutX="-2.0" onMouseClicked="#SelectedInfo" prefHeight="321.0" prefWidth="576.0" />
+            <Separator layoutX="570.0" layoutY="320.0" orientation="VERTICAL" prefHeight="281.0" prefWidth="12.0" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
